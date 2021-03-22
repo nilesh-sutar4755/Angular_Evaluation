@@ -1,0 +1,27 @@
+<div class="content">
+  <div class="text-center">
+    <h5 class="my-4">Parent Component</h5>
+    <button class="btn btn-primary mr-2" [disabled]="!utilityService.areArraysEqual(dataArr1, dataArr2)"
+      (click)="onClick('shuffle')">Shuffle</button>
+    <button class="btn btn-primary" [disabled]="utilityService.areArraysEqual(dataArr1, dataArr2)"
+      (click)="onClick('sort')">Sort</button>
+  </div>
+  <div class="row justify-content-around text-center my-5">
+    <div class="col-md-4 col-sm-6">
+      <div class="inner-content">
+        <app-child1 [dataArr]="dataArr1" (passData)="getData($event,'child_1')"></app-child1>
+        <h5 class="my-3" id="first-child">
+          Child Component 1
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="inner-content">
+        <app-child2 [dataArr]="dataArr2" (passData)="getData($event,'child_2')"></app-child2>
+        <h5 class="my-3" id="second-child">
+          Child Component 2
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>

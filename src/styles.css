@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+main {
+  margin: 20px 0;
+}
+
+.inner-box {
+  padding: 15px;
+  font-size: 15px;
+}
+
+.child-wrapper .d-flex {
+  height: 20px;
+  background: #ddd;
+}
+
+.content .inner-content h5#first-child {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .content .inner-content h5#first-child {
+      height: 30px;
+  }
+}

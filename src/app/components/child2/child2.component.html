@@ -1,0 +1,13 @@
+<div class="child-wrapper">
+  <div class="row">
+    <div class="col-12 mb-2" *ngFor="let item of dataArr">
+      <div class="d-flex">
+        <div [style.backgroundColor]="item.color" class="w-25 p-1">
+        </div>
+        <div class="inner-box p-0 w-75">
+          {{item.value}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

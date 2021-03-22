@@ -1,0 +1,10 @@
+
+<div class="child-wrapper">
+    <div class="row m-0">
+        <div class="col-4" [class.text-white]="item.color != '#FFFFFF' && item.color != '#EFEFEF'" [style.backgroundColor]="item.color" *ngFor="let item of dataArr">
+            <div class="inner-box">
+                {{item.value}}
+            </div>
+        </div>
+    </div>
+</div>
